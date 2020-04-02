@@ -1,3 +1,1 @@
-This is personal page of yuyuexi.
-
-url: [yuyuexi](https://yuyuexi.github.io)
+This is [yuyuexi's personal page](https://yuyuexi.github.io).
