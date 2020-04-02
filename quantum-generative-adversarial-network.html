@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-        <meta charset="utf-8">
+            <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>yuyuexi - Articles by yuyuexi</title>
+        <title>yuyuexi</title>
 
 
         <!-- Bootstrap Core CSS -->
@@ -32,8 +32,21 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-		<meta property="og:locale" content="en">
+
+
+
+
+
+			<meta property="og:locale" content="en">
 		<meta property="og:site_name" content="yuyuexi">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="/quantum-generative-adversarial-network.html">
+	<meta property="og:title" content="Quantum generative adversarial network">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="//images/qugan">
+	<meta property="article:published_time" content="2020-03-27 00:00:00+08:00">
 </head>
 
 <body>
@@ -59,7 +72,7 @@
                             <li><a href="/category/machine-learning.html">machine learning</a></li>
                             <li><a href="/category/photo.html">Photo</a></li>
                             <li><a href="/category/physics.html">physics</a></li>
-                            <li><a href="/category/quantum-physics.html">Quantum physics</a></li>
+                            <li class="active"><a href="/category/quantum-physics.html">Quantum physics</a></li>
 
                             <li><a href="/pages/about.html">about</a></li>
                 </ul>
@@ -71,12 +84,17 @@
     </nav>
 
     <!-- Page Header -->
-        <header class="intro-header" style="background-image: url('/theme/images/home-bg.jpg')">
+        <header class="intro-header" style="background-image: url('/images/qugan')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Articles by yuyuexi</h1>
+                        <h1>Quantum generative adversarial network</h1>
+                        <span class="meta">Posted by
+                                <a href="/author/yuyuexi.html">yuyuexi</a>
+                             on Fri 27 March 2020
+                        </span>
+                        
                     </div>
                 </div>
             </div>
@@ -87,66 +105,22 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-preview">
-            <a href="/Hello world of machine learning.html" rel="bookmark" title="Permalink to Hello World">
-                <h2 class="post-title">
-                    Hello World
-                </h2>
-            </a>
-                <p>hello world.</p>
-            <p class="post-meta">Posted by
-                    <a href="/author/yuyuexi.html">yuyuexi</a>
-                 on Wed 01 April 2020
-            </p>
-        </div>
-        <hr>
-        <div class="post-preview">
-            <a href="/hello-world.html" rel="bookmark" title="Permalink to Hello World">
-                <h2 class="post-title">
-                    Hello World
-                </h2>
-            </a>
-                <p>hello world.</p>
-            <p class="post-meta">Posted by
-                    <a href="/author/yuyuexi.html">yuyuexi</a>
-                 on Wed 01 April 2020
-            </p>
-        </div>
-        <hr>
-        <div class="post-preview">
-            <a href="/travel-to-guangdong-2019.html" rel="bookmark" title="Permalink to Travel to Guangdong 2019">
-                <h2 class="post-title">
-                    Travel to Guangdong 2019
-                </h2>
-            </a>
-                <p>photos of Guangdong</p>
-            <p class="post-meta">Posted by
-                    <a href="/author/yuyuexi.html">yuyuexi</a>
-                 on Wed 01 April 2020
-            </p>
-        </div>
-        <hr>
-        <div class="post-preview">
-            <a href="/quantum-generative-adversarial-network.html" rel="bookmark" title="Permalink to Quantum generative adversarial network">
-                <h2 class="post-title">
-                    Quantum generative adversarial network
-                </h2>
-            </a>
-                <p>quantum generative adversarial network</p>
-            <p class="post-meta">Posted by
-                    <a href="/author/yuyuexi.html">yuyuexi</a>
-                 on Fri 27 March 2020
-            </p>
-        </div>
-        <hr>
+    <!-- Post Content -->
+    <article>
+        <p>对抗生成网络（ $GANs$ ）是近年来机器学习领域具有里程碑意义的成果，在生成学习中展现出超越其他机器学习算法的巨大优势。我们知道，无论哪一种机器学习算法，最核心的问题始终是优化问题，其本质上都是对于线性方程组的处理。对抗生成网络也不例外，在数学上，对抗生成网络的优化问题是一个线性规划问题。</p>
+<p>由于量子力学的数学内核的线性代数，使用量子计算处理线性问题是非常自然的方式，因此任何线性问题的量子算法与现有的经典算法相比，都具有巨大的潜在优势。量子对抗生成网络（ $QuGANs$ ）就是经典的对抗生成网络的量子版本。与经典情况类似，量子对抗生成网络主要由三个部分组成：真实量子态（由密度矩阵 $\sigma$ 描述）、装配有量子处理器的生成器（符号 G 表示，生成的量子态由密度矩阵 $\rho$ 表示）、装配有量子处理器的判别器（符号 D 表示，可实施测量 $\mathcal{M}$  ）。</p>
+<p>量子对抗生成网络的基本训练步骤也与经典情况类似。
+- 随机给定系统的初始参数；
+- 固定生成器参数，调节判别器测量参数，使得判别器成功识别量子态 $\sigma $几率最大；
+- 固定判别器参数，调节生成器生成参数，使得判别器成功识别量子态 $\sigma$ 几率最小；
+- 重复步骤 2、3，直到达到全局最优。</p>
+<p>此时我们已经成功训练了量子对抗生成网络，识别器已经无法识别真实量子态与生成器所产生的量子态，通过调控对生成器的熵输入我们可以生成具有真实态特征的量子态。</p>
+<p><strong>Reference:</strong>
+- $\text{ [1406.2661] Generative Adversarial Networks} (Goodfellow)$</p>
+    </article>
 
-    <!-- Pager -->
-    <ul class="pager">
-        <li class="next">
-        </li>
-    </ul>
-    Page 1 / 1
     <hr>
+
             </div>
         </div>
     </div>
