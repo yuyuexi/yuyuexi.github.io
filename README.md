@@ -1,2 +1,2 @@
 # yuyuexi's personal page
-This is a [personal website of yuyuexi](http://github.yuyuexi.io/)
+This is a [personal website of yuyuexi](http://yuyuexi.github.io/)
